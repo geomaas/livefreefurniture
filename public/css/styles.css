@@ -21,7 +21,15 @@ a {
     text-align: center; }
     .title img {
       align-self: center;
-      max-width: 40%; }
+      max-width: 40%;
+      max-height: 90%; }
+    .title .contact-container {
+      align-self: center;
+      width: 100%;
+      flex-grow: 1; }
+      .title .contact-container .contact-button {
+        width: 25%;
+        margin: 5%auto; }
   .mission {
     background: linear-gradient(rgba(51, 51, 51, 0.25), rgba(138, 38, 11, 0.25)), url("../assets/planer_shavings_thumb.jpg");
     background-position: center;
@@ -31,36 +39,42 @@ a {
     float: right;
     width: 50vw;
     height: 50vh;
-    text-align: center;
-    overflow: scroll; }
+    flex-direction: column; }
+    .mission h1 {
+      font-family: "Open Sans", sans-serif;
+      color: white;
+      margin: 1%;
+      align-self: center; }
     .mission .mission-text {
       align-self: center;
-      display: inline-block;
       background-color: rgba(51, 51, 51, 0.75);
       margin: 0;
       color: white;
       font-size: 1.45rem;
       padding: 2%;
       font-family: "Lato", sans-serif; }
-      .mission .mission-text h1 {
-        font-family: "Open Sans", sans-serif;
-        padding: 0 0 1%;
-        margin: 0; }
   .about-craftsman {
     background: linear-gradient(rgba(138, 38, 11, 0.25), rgba(51, 51, 51, 0.25)), url("../assets/workshop_thumb.jpg");
     background-position: center;
     background-size: cover;
     float: left;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     width: 50vw;
     height: 50vh;
-    overflow: scroll;
-    text-align: center; }
+    overflow: scroll; }
     .about-craftsman .portrait {
-      display: inline-block;
-      max-width: 25%;
+      align-self: center;
+      max-width: 20%;
+      max-height: 100%;
       border-radius: 100%;
       padding: 1%; }
+    .about-craftsman h1 {
+      font-family: "Open Sans", sans-serif;
+      color: white;
+      margin: 1%;
+      align-self: center; }
     .about-craftsman .about-text {
       background-color: rgba(51, 51, 51, 0.75);
       display: inline-block;
@@ -69,10 +83,6 @@ a {
       font-size: 1.45rem;
       padding: 2%;
       font-family: "Lato", sans-serif; }
-      .about-craftsman .about-text h1 {
-        font-family: "Open Sans", sans-serif;
-        padding: 0 0 1%;
-        margin: 0; }
   .gallery {
     background: linear-gradient(rgba(236, 186, 127, 0.25), rgba(138, 38, 11, 0.25)), url("../assets/wood-tree-grain-fallen_thumb.jpg");
     background-position: center;
@@ -89,6 +99,19 @@ a {
       color: white;
       margin: 0;
       font-family: "Open Sans", sans-serif; }
+    .gallery .furniture-group {
+      display: flex;
+      justify-content: center;
+      width: 21%;
+      height: 80%;
+      margin: auto;
+      -webkit-box-shadow: 2px 9px 9px -5px rgba(0, 0, 0, 0.53);
+      -moz-box-shadow: 2px 9px 9px -5px rgba(0, 0, 0, 0.53);
+      box-shadow: 2px 9px 9px -5px rgba(0, 0, 0, 0.53);
+      border-radius: 5px;
+      transition: ease 0.5s; }
+      .gallery .furniture-group a {
+        text-decoration: none; }
     .gallery .furniture {
       display: flex;
       justify-content: center;
@@ -105,7 +128,17 @@ a {
         .gallery .furniture .table h1 {
           align-self: center;
           color: white;
-          text-decoration: none; }
+          visibility: hidden;
+          text-decoration: none;
+          transform: translateY(100%); }
+        .gallery .furniture .table:hover {
+          background: linear-gradient(rgba(51, 51, 51, 0.75), rgba(51, 51, 51, 0.75)), url("../assets/furniture/coffee_table_thumb.jpg");
+          transform: scale(1.1);
+          background-position: center;
+          background-size: cover; }
+          .gallery .furniture .table:hover h1 {
+            visibility: visible;
+            text-decoration: none; }
       .gallery .furniture .chairs {
         background: url("../assets/furniture/chairs_thumb.jpg");
         background-position: center;
@@ -115,7 +148,8 @@ a {
           vertical-align: middle;
           color: white;
           visibility: hidden;
-          text-decoration: none; }
+          text-decoration: none;
+          transform: translateY(100%); }
         .gallery .furniture .chairs:hover {
           background: linear-gradient(rgba(51, 51, 51, 0.75), rgba(51, 51, 51, 0.75)), url("../assets/furniture/chairs_thumb.jpg");
           transform: scale(1.1);
@@ -132,7 +166,8 @@ a {
           vertical-align: middle;
           color: white;
           visibility: hidden;
-          text-decoration: none; }
+          text-decoration: none;
+          transform: translateY(100%); }
         .gallery .furniture .boards:hover {
           background: linear-gradient(rgba(51, 51, 51, 0.75), rgba(51, 51, 51, 0.75)), url("../assets/furniture/cutting_board_thumb.jpg");
           transform: scale(1.1);
@@ -150,7 +185,8 @@ a {
           vertical-align: middle;
           color: white;
           visibility: hidden;
-          text-decoration: none; }
+          text-decoration: none;
+          transform: translateY(100%); }
         .gallery .furniture .shelves:hover {
           background: linear-gradient(rgba(51, 51, 51, 0.75), rgba(51, 51, 51, 0.75)), url("../assets/furniture/kitchen_shelves_thumb.jpg");
           transform: scale(1.1);
@@ -158,39 +194,45 @@ a {
           background-size: cover; }
           .gallery .furniture .shelves:hover h1 {
             visibility: visible;
-            text-decoration: none; }
-      .gallery .furniture .furniture-group {
-        display: flex;
-        justify-content: center;
-        width: 21%;
-        height: 80%;
-        margin: auto;
-        -webkit-box-shadow: 2px 9px 9px -5px rgba(0, 0, 0, 0.53);
-        -moz-box-shadow: 2px 9px 9px -5px rgba(0, 0, 0, 0.53);
-        box-shadow: 2px 9px 9px -5px rgba(0, 0, 0, 0.53);
-        border-radius: 5px;
-        transition: ease 0.5s; }
-        .gallery .furniture .furniture-group a {
-          text-decoration: none; } }
+            text-decoration: none; } }
 
-@media only screen and (max-width: 999px) {
+@media only screen and (max-width: 999px) and (orientation: landscape) {
+  /*---------------------------*/
+  .spacer {
+    width: 100%;
+    flex-grow: 1;
+    background-color: lightblue; }
+  .up-arrow {
+    margin-top: 8%;
+    margin-bottom: 2%;
+    margin-left: 85%; }
+  .down-arrow {
+    margin-top: 2%;
+    margin-bottom: 8%;
+    margin-left: 85%; }
+  /*---------------------------*/
   .title {
-    background: linear-gradient(rgba(138, 38, 11, 0.25), rgba(236, 186, 127, 0.25)), url("../assets/end_grain_rotate.jpg");
+    background: linear-gradient(rgba(138, 38, 11, 0.25), rgba(236, 186, 127, 0.25)), url("../assets/end_grain_thumb.jpg");
     background-position: center;
-    background-size: cover;
+    background-size: 100%;
     float: left;
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 100vw;
-    height: 100vh; }
-    .title img {
-      max-width: 75%;
-      align-self: center; }
-    .title h3 {
-      color: white; }
-    .title .down-arrow {
-      align-self: center; }
+    height: 100vh;
+    text-align: center; }
+    .title #logo {
+      align-self: center;
+      max-width: 40%;
+      max-height: 90%; }
+    .title .contact-container {
+      align-self: center;
+      width: 100%;
+      flex-grow: 1; }
+      .title .contact-container .contact-button {
+        width: 25%;
+        margin: 5%auto; }
   .mission {
     background: linear-gradient(rgba(51, 51, 51, 0.25), rgba(138, 38, 11, 0.25)), url("../assets/planer_shavings_thumb.jpg");
     background-position: center;
@@ -201,7 +243,6 @@ a {
     width: 100vw;
     height: 100vh;
     text-align: center;
-    overflow: scroll;
     flex-direction: column; }
     .mission h1 {
       font-family: "Open Sans", sans-serif;
@@ -216,10 +257,176 @@ a {
       font-size: 1.5rem;
       padding: 2%;
       font-family: "Lato", sans-serif; }
-    .mission .up-arrow {
-      text-decoration: none; }
-    .mission .down-arrow {
-      text-decoration: none; }
+  .about-craftsman {
+    background: linear-gradient(rgba(138, 38, 11, 0.25), rgba(51, 51, 51, 0.25)), url("../assets/workshop_thumb.jpg");
+    background-position: center;
+    background-size: cover;
+    float: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    text-align: center; }
+    .about-craftsman .portrait {
+      display: none;
+      align-self: center;
+      text-align: center;
+      max-width: 40%;
+      max-height: 20%;
+      border-radius: 100%;
+      margin: 5%; }
+    .about-craftsman h1 {
+      font-family: "Open Sans", sans-serif;
+      color: white;
+      margin: 1%;
+      text-align: center; }
+    .about-craftsman .about-text {
+      background-color: rgba(51, 51, 51, 0.75);
+      display: inline-block;
+      margin: 0;
+      color: white;
+      font-size: 1.5rem;
+      padding: 2%;
+      font-family: "Lato", sans-serif; }
+  .gallery {
+    background: linear-gradient(rgba(236, 186, 127, 0.25), rgba(138, 38, 11, 0.25)), url("../assets/wood-tree-grain-fallen_thumb.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    float: right;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    vertical-align: middle; }
+    .gallery h1 {
+      color: white;
+      margin: 0;
+      font-family: "Open Sans", sans-serif; }
+    .gallery .furniture-group {
+      display: flex;
+      justify-content: center;
+      width: 21%;
+      height: 80%;
+      margin: auto;
+      -webkit-box-shadow: 2px 9px 9px -5px rgba(0, 0, 0, 0.53);
+      -moz-box-shadow: 2px 9px 9px -5px rgba(0, 0, 0, 0.53);
+      box-shadow: 2px 9px 9px -5px rgba(0, 0, 0, 0.53);
+      border-radius: 5px;
+      transition: ease 0.5s; }
+      .gallery .furniture-group a {
+        text-decoration: none; }
+    .gallery .furniture {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 75%;
+      align-self: center; }
+      .gallery .furniture .table {
+        background: url("../assets/furniture/coffee_table_thumb.jpg");
+        background-position: center;
+        background-size: cover;
+        transition: ease 0.5s;
+        display: flex;
+        justify-content: center; }
+        .gallery .furniture .table h1 {
+          align-self: center;
+          color: white;
+          visibility: hidden;
+          text-decoration: none;
+          transform: translateY(100%); }
+      .gallery .furniture .chairs {
+        background: url("../assets/furniture/chairs_thumb.jpg");
+        background-position: center;
+        background-size: cover; }
+        .gallery .furniture .chairs h1 {
+          padding: 1%;
+          vertical-align: middle;
+          color: white;
+          visibility: hidden;
+          text-decoration: none;
+          transform: translateY(100%); }
+      .gallery .furniture .boards {
+        background: url("../assets/furniture/cutting_board_thumb.jpg");
+        background-position: center;
+        background-size: cover; }
+        .gallery .furniture .boards h1 {
+          vertical-align: middle;
+          color: white;
+          visibility: hidden;
+          text-decoration: none;
+          transform: translateY(100%); }
+      .gallery .furniture .shelves {
+        background: url("../assets/furniture/kitchen_shelves_thumb.jpg");
+        background-position: center;
+        background-size: cover; }
+        .gallery .furniture .shelves h1 {
+          padding: 1%;
+          vertical-align: middle;
+          color: white;
+          visibility: hidden;
+          text-decoration: none;
+          transform: translateY(100%); } }
+
+@media only screen and (max-width: 999px) and (orientation: portrait) {
+  /*---------------------------*/
+  .spacer {
+    width: 100%;
+    flex-grow: 1;
+    background-color: lightblue; }
+  .up-arrow {
+    margin-top: 10%;
+    margin-bottom: 2%;
+    margin-left: 85%; }
+  .down-arrow {
+    margin-top: 2%;
+    margin-bottom: 10%;
+    margin-left: 85%; }
+  /*---------------------------*/
+  .title {
+    background: linear-gradient(rgba(138, 38, 11, 0.5), rgba(236, 186, 127, 0.25)), url("../assets/end_grain_rotate.jpg");
+    background-position: center;
+    background-size: cover;
+    float: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    text-align: center; }
+    .title img {
+      max-width: 80%;
+      align-self: center; }
+    .title .contact-container {
+      width: 100%;
+      flex-grow: 1; }
+  .mission {
+    background: linear-gradient(rgba(51, 51, 51, 0.25), rgba(138, 38, 11, 0.25)), url("../assets/planer_shavings_thumb.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    float: right;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    flex-direction: column; }
+    .mission h1 {
+      font-family: "Open Sans", sans-serif;
+      color: white;
+      padding: 0 0 1%;
+      margin: 1%; }
+    .mission .mission-text {
+      align-self: center;
+      background-color: rgba(51, 51, 51, 0.5);
+      margin: 0;
+      color: white;
+      font-size: 1.5rem;
+      padding: 2%;
+      font-family: "Lato", sans-serif; }
   .about-craftsman {
     background: linear-gradient(rgba(138, 38, 11, 0.25), rgba(51, 51, 51, 0.25)), url("../assets/workshop_thumb.jpg");
     background-position: center;
@@ -235,9 +442,14 @@ a {
     .about-craftsman .portrait {
       align-self: center;
       text-align: center;
-      max-width: 50%;
+      max-width: 40%;
       border-radius: 100%;
       margin: 5%; }
+    .about-craftsman h1 {
+      font-family: "Open Sans", sans-serif;
+      color: white;
+      margin: 1%;
+      text-align: center; }
     .about-craftsman .about-text {
       background-color: rgba(51, 51, 51, 0.75);
       display: inline-block;
@@ -246,14 +458,6 @@ a {
       font-size: 1.5rem;
       padding: 2%;
       font-family: "Lato", sans-serif; }
-      .about-craftsman .about-text h1 {
-        font-family: "Open Sans", sans-serif;
-        padding: 0 0 1%;
-        margin: 0; }
-    .about-craftsman .up-arrow {
-      text-decoration: none; }
-    .about-craftsman .down-arrow {
-      text-decoration: none; }
   .gallery {
     background: linear-gradient(rgba(236, 186, 127, 0.25), rgba(138, 38, 11, 0.25)), url("../assets/wood-tree-grain-fallen_rotate.jpg");
     background-position: center;
@@ -262,20 +466,37 @@ a {
     justify-content: center;
     flex-direction: column;
     float: right;
+    text-align: center;
     width: 100vw;
-    height: 100vh; }
+    height: 100vh;
+    overflow: scroll; }
     .gallery h1 {
+      font-family: "Open Sans", sans-serif;
+      margin: 1% 1% 3%;
       color: white;
-      align-self: center; }
-    .gallery .up-arrow {
-      align-self: center; }
+      text-align: center; }
     .gallery .furniture {
       display: flex;
       justify-content: center;
       flex-direction: column;
       width: 100%;
       height: 80%;
+      background-color: lightblue;
       align-self: center; }
+      .gallery .furniture .furniture-group {
+        width: 90%;
+        height: 22%;
+        display: flex;
+        justify-content: center;
+        margin: 2% auto;
+        -webkit-box-shadow: 2px 9px 9px -5px rgba(0, 0, 0, 0.53);
+        -moz-box-shadow: 2px 9px 9px -5px rgba(0, 0, 0, 0.53);
+        box-shadow: 2px 9px 9px -5px rgba(0, 0, 0, 0.53);
+        border-radius: 5px;
+        transition: ease 0.5s; }
+        .gallery .furniture .furniture-group h1 {
+          align-self: center;
+          color: white; }
       .gallery .furniture .table {
         background: url("../assets/furniture/coffee_table_thumb.jpg");
         background-position: center;
@@ -292,23 +513,4 @@ a {
       .gallery .furniture .shelves {
         background: url("../assets/furniture/kitchen_shelves_thumb.jpg");
         background-position: center;
-        background-size: cover; }
-      .gallery .furniture .furniture-group {
-        display: block;
-        width: 90%;
-        height: 25%;
-        margin: 2% auto;
-        -webkit-box-shadow: 2px 9px 9px -5px rgba(0, 0, 0, 0.53);
-        -moz-box-shadow: 2px 9px 9px -5px rgba(0, 0, 0, 0.53);
-        box-shadow: 2px 9px 9px -5px rgba(0, 0, 0, 0.53);
-        border-radius: 5px;
-        transition: ease 0.5s;
-        vertical-align: middle; }
-        .gallery .furniture .furniture-group a {
-          text-decoration: none;
-          text-align: center; }
-        .gallery .furniture .furniture-group h1 {
-          background-color: rgba(51, 51, 51, 0.9);
-          padding: 1%;
-          color: white;
-          transform: translateY(25%); } }
+        background-size: cover; } }

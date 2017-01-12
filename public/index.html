@@ -8,45 +8,77 @@
     <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto+Slab:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" media="screen" title="no title">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/css/swipebox.min.css">
     <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="js/jquery.swipebox.min.js" charset="utf-8"></script>
     <script src="js/app.js" charset="utf-8"></script>
 </head>
 
 <body>
-    <div class="title">
-        <img src="assets/LFF_logo.png" alt="Live Free Furniture">
-        <!-- <a href="tel:"><h3>Call: 555-5555</h3></a> -->
-        <a href="#"></a>
-        <a href="#"><img class="down-arrow" src="assets/buttons/1484120743_ChevronDownCircle.svg" alt=""></a>
+    <div class="title" id="title">
+        <div class="contact-container">
+            <a href="#">
+                <div class="contact-button">
+
+                </div>
+            </a>
+        </div>
+        <img id="logo"src="assets/LFF_logo.png" alt="Live Free Furniture">
+        <div class="contact-container">
+            <a href="#">
+                <div class="contact-button">
+
+                </div>
+            </a>
+            <a href="#">
+                <div class="contact-button">
+
+                </div>
+            </a>
+        </div>
+        <a href="#mission"><img class="down-arrow" src="assets/buttons/1484120743_ChevronDownCircle.svg" alt=""></a>
     </div>
-    <div class="mission">
-        <a href="#"><img class="up-arrow" src="assets/buttons/1484120773_ChevronUpCircle.svg" alt=""></a>
+    <div class="mission" id="mission">
+        <a href="#title"><img class="up-arrow" src="assets/buttons/1484120773_ChevronUpCircle.svg" alt=""></a>
+        <div class="spacer">
+
+        </div>
         <h1>Mission</h1>
         <div class="mission-text">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
                 irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
-        <a href="#"><img class="down-arrow" src="assets/buttons/1484120743_ChevronDownCircle.svg" alt=""></a>
+        <div class="spacer">
+
+        </div>
+        <a href="#about-craftsman"><img class="down-arrow" src="assets/buttons/1484120743_ChevronDownCircle.svg" alt=""></a>
 
     </div>
-    <div class="about-craftsman">
-        <a href="#"><img class="up-arrow" src="assets/buttons/1484120773_ChevronUpCircle.svg" alt=""></a>
+    <div class="about-craftsman" id="about-craftsman">
+        <a href="#mission"><img class="up-arrow" src="assets/buttons/1484120773_ChevronUpCircle.svg" alt=""></a>
+        <div class="spacer">
 
+        </div>
         <img class="portrait" src="assets/dog.jpeg" alt="">
+        <h1>About The Craftsman</h1>
         <div class="about-text">
-            <h1>About The Craftsman</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
                 irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
-        <a href="#"><img class="down-arrow" src="assets/buttons/1484120743_ChevronDownCircle.svg" alt=""></a>
+        <div class="spacer">
+
+        </div>
+        <a href="#gallery"><img class="down-arrow" src="assets/buttons/1484120743_ChevronDownCircle.svg" alt=""></a>
 
     </div>
-    <div class="gallery">
-        <!-- <a href="#"><img class="up-arrow" src="assets/buttons/1484120773_ChevronUpCircle.svg" alt=""></a> -->
+    <div class="gallery" id="gallery">
+        <a href="#about-craftsman"><img class="up-arrow" src="assets/buttons/1484120773_ChevronUpCircle.svg" alt=""></a>
+        <div class="spacer">
 
+        </div>
         <h1>Projects</h1>
         <div class="furniture">
             <div class="furniture-group table">
@@ -56,13 +88,15 @@
                 <a href="#"><h1>Chairs</h1></a>
             </div>
             <div class="furniture-group boards">
-                <a href="#"><h1>Cutting Boards</h1></a>
+                <a href="#"><h1>Boards</h1></a>
             </div>
             <div class="furniture-group shelves">
                 <a href="#"><h1>Shelves</h1></a>
             </div>
         </div>
+        <div class="spacer">
 
+        </div>
     </div>
 
     <!-- <div class="email-form-screen">
