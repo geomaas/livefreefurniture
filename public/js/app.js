@@ -1,5 +1,21 @@
 $(document).ready(function() {
     /*------------------------------*/
+    $('.email-form-screen').addClass('hidden');
+
+    $('.contact-one').on('click', function(e) {
+        console.log("contact button clicked");
+        e.preventDefault();
+        // $('.email-form-screen').addClass('animated fadeIn');
+        $('.email-form-screen').removeClass('hidden');
+
+    });
+
+    $('.close-email').on('click', function(e) {
+        e.preventDefault();
+        // $('.email-form-screen').addClass('animated fadeOut');
+        $('.email-form-screen').addClass('hidden');
+    });
+    /*------------------------------*/
 
     // $('.title').addClass('animated fadeIn');
     // $('.mission').addClass('animated slideInDown');
@@ -50,5 +66,7 @@ $(document).ready(function() {
         }, ]);
     });
     /*------------------------------*/
+
+
 
 });

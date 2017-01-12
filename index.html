@@ -21,22 +21,16 @@
     <div class="title" id="title">
         <div class="contact-container">
             <a href="#">
-                <div class="contact-button">
-
-                </div>
+                <img class="title-button etsy-one" src="assets/buttons/etsy_button.png" alt="">
             </a>
         </div>
-        <img id="logo"src="assets/LFF_logo.png" alt="Live Free Furniture">
+        <img id="logo" src="assets/LFF_logo.png" alt="Live Free Furniture">
         <div class="contact-container">
             <a href="#">
-                <div class="contact-button">
-
-                </div>
+                <img class="title-button etsy-two" src="assets/buttons/etsy_button.png" alt="">
             </a>
             <a href="#">
-                <div class="contact-button">
-
-                </div>
+                <img class="title-button contact-one" src="assets/buttons/contact_button.png" alt="">
             </a>
         </div>
         <a href="#mission"><img class="down-arrow" src="assets/buttons/1484120743_ChevronDownCircle.svg" alt=""></a>
@@ -99,17 +93,37 @@
         </div>
     </div>
 
-    <!-- <div class="email-form-screen">
+    <div class="email-form-screen">
         <div class="form-box">
+          <a href="#"><img class="close-email" src="assets/buttons/1484266282_Close_Icon_Circle.svg" alt=""></a>
             <form action="https://formspree.io/your@email.com" method="POST">
-                <input type="text" name="name">
-                <input type="email" name="_replyto">
-                <textarea name="text" rows="8" cols="80"></textarea>
-                <input type="submit" value="Send">
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="name">Name</label>
+                    <div class="col-md-9">
+                        <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="email">Your E-mail</label>
+                    <div class="col-md-9">
+                        <input id="email" name="_replyto" type="text" placeholder="Your email" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label" for="message">Your message</label>
+                    <div class="col-md-9">
+                        <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+              <div class="col-md-12 text-right">
+                <button type="submit" value="Send" class="btn btn-primary btn-lg">Submit</button>
+              </div>
+            </div>
             </form>
         </div>
 
-    </div> -->
+    </div>
 </body>
 
 </html>

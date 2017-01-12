@@ -4,7 +4,10 @@ body {
 a {
   text-decoration: none; }
 
-@media only screen and (min-width: 1000px) {
+.hidden {
+  display: none; }
+
+@media only screen and (min-width: 1200px) {
   .down-arrow {
     display: none; }
   .up-arrow {
@@ -19,7 +22,7 @@ a {
     width: 50vw;
     height: 50vh;
     text-align: center; }
-    .title img {
+    .title #logo {
       align-self: center;
       max-width: 40%;
       max-height: 90%; }
@@ -27,9 +30,13 @@ a {
       align-self: center;
       width: 100%;
       flex-grow: 1; }
-      .title .contact-container .contact-button {
-        width: 25%;
-        margin: 5%auto; }
+      .title .contact-container .title-button {
+        width: 75%;
+        transition: ease 0.7s; }
+        .title .contact-container .title-button:hover {
+          transform: scale(1.25); }
+      .title .contact-container .etsy-two {
+        display: none; }
   .mission {
     background: linear-gradient(rgba(51, 51, 51, 0.25), rgba(138, 38, 11, 0.25)), url("../assets/planer_shavings_thumb.jpg");
     background-position: center;
@@ -194,14 +201,47 @@ a {
           background-size: cover; }
           .gallery .furniture .shelves:hover h1 {
             visibility: visible;
-            text-decoration: none; } }
+            text-decoration: none; }
+  .email-form-screen {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.7);
+    z-index: 500; }
+    .email-form-screen .close-email {
+      width: 5%;
+      margin: 2%;
+      float: right; }
+    .email-form-screen .form-box {
+      align-self: center;
+      color: white;
+      margin: auto;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 50%;
+      border-radius: 5px;
+      background: linear-gradient(rgba(51, 51, 51, 0.5), rgba(255, 255, 255, 0.2)), url("../assets/construction-work-carpenter-tools_thumb.jpg");
+      background-position: center;
+      background-size: cover;
+      -webkit-box-shadow: 10px 10px 70px 5px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 10px 10px 70px 5px rgba(0, 0, 0, 0.5);
+      box-shadow: 10px 10px 70px 5px rgba(0, 0, 0, 0.5); }
+      .email-form-screen .form-box .form-group {
+        margin-bottom: 2%; }
+        .email-form-screen .form-box .form-group .control-label {
+          margin: 2%; }
+        .email-form-screen .form-box .form-group .btn {
+          margin: 2%; } }
 
-@media only screen and (max-width: 999px) and (orientation: landscape) {
+@media only screen and (max-width: 1199px) and (orientation: landscape) {
   /*---------------------------*/
   .spacer {
     width: 100%;
-    flex-grow: 1;
-    background-color: lightblue; }
+    flex-grow: 1; }
   .up-arrow {
     margin-top: 8%;
     margin-bottom: 2%;
@@ -218,7 +258,7 @@ a {
     float: left;
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     width: 100vw;
     height: 100vh;
     text-align: center; }
@@ -230,9 +270,12 @@ a {
       align-self: center;
       width: 100%;
       flex-grow: 1; }
-      .title .contact-container .contact-button {
-        width: 25%;
-        margin: 5%auto; }
+      .title .contact-container .title-button {
+        width: 75%; }
+      .title .contact-container .etsy-two {
+        display: none; }
+    .title .down-arrow {
+      display: none; }
   .mission {
     background: linear-gradient(rgba(51, 51, 51, 0.25), rgba(138, 38, 11, 0.25)), url("../assets/planer_shavings_thumb.jpg");
     background-position: center;
@@ -254,7 +297,7 @@ a {
       background-color: rgba(51, 51, 51, 0.5);
       margin: 0;
       color: white;
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       padding: 2%;
       font-family: "Lato", sans-serif; }
   .about-craftsman {
@@ -287,7 +330,7 @@ a {
       display: inline-block;
       margin: 0;
       color: white;
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       padding: 2%;
       font-family: "Lato", sans-serif; }
   .gallery {
@@ -369,14 +412,47 @@ a {
           color: white;
           visibility: hidden;
           text-decoration: none;
-          transform: translateY(100%); } }
+          transform: translateY(100%); }
+  .email-form-screen {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.7);
+    z-index: 500; }
+    .email-form-screen .close-email {
+      width: 8%;
+      margin: 2%;
+      float: right; }
+    .email-form-screen .form-box {
+      align-self: center;
+      color: white;
+      margin: auto;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 75%;
+      border-radius: 5px;
+      background: linear-gradient(rgba(51, 51, 51, 0.5), rgba(255, 255, 255, 0.2)), url("../assets/construction-work-carpenter-tools_thumb.jpg");
+      background-position: center;
+      background-size: cover;
+      -webkit-box-shadow: 10px 10px 70px 5px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 10px 10px 70px 5px rgba(0, 0, 0, 0.5);
+      box-shadow: 10px 10px 70px 5px rgba(0, 0, 0, 0.5); }
+      .email-form-screen .form-box .form-group {
+        margin-bottom: 2%; }
+        .email-form-screen .form-box .form-group .control-label {
+          margin: 2%; }
+        .email-form-screen .form-box .form-group .btn {
+          margin: 2%; } }
 
-@media only screen and (max-width: 999px) and (orientation: portrait) {
+@media only screen and (max-width: 1199px) and (orientation: portrait) {
   /*---------------------------*/
   .spacer {
     width: 100%;
-    flex-grow: 1;
-    background-color: lightblue; }
+    flex-grow: 1; }
   .up-arrow {
     margin-top: 10%;
     margin-bottom: 2%;
@@ -397,12 +473,18 @@ a {
     width: 100vw;
     height: 100vh;
     text-align: center; }
-    .title img {
+    .title #logo {
       max-width: 80%;
       align-self: center; }
     .title .contact-container {
+      align-self: center;
       width: 100%;
       flex-grow: 1; }
+      .title .contact-container .title-button {
+        width: 40%;
+        transition: ease 0.7s; }
+      .title .contact-container .etsy-one {
+        display: none; }
   .mission {
     background: linear-gradient(rgba(51, 51, 51, 0.25), rgba(138, 38, 11, 0.25)), url("../assets/planer_shavings_thumb.jpg");
     background-position: center;
@@ -481,7 +563,6 @@ a {
       flex-direction: column;
       width: 100%;
       height: 80%;
-      background-color: lightblue;
       align-self: center; }
       .gallery .furniture .furniture-group {
         width: 90%;
@@ -513,4 +594,38 @@ a {
       .gallery .furniture .shelves {
         background: url("../assets/furniture/kitchen_shelves_thumb.jpg");
         background-position: center;
-        background-size: cover; } }
+        background-size: cover; }
+  .email-form-screen {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(51, 51, 51, 0.7);
+    z-index: 500; }
+    .email-form-screen .close-email {
+      width: 10%;
+      margin: 2%;
+      float: right; }
+    .email-form-screen .form-box {
+      align-self: center;
+      color: white;
+      margin: auto;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 90%;
+      border-radius: 5px;
+      background: linear-gradient(rgba(51, 51, 51, 0.5), rgba(255, 255, 255, 0.2)), url("../assets/construction-work-carpenter-tools_thumb.jpg");
+      background-position: center;
+      background-size: cover;
+      -webkit-box-shadow: 10px 10px 70px 5px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 10px 10px 70px 5px rgba(0, 0, 0, 0.5);
+      box-shadow: 10px 10px 70px 5px rgba(0, 0, 0, 0.5); }
+      .email-form-screen .form-box .form-group {
+        margin-bottom: 2%; }
+        .email-form-screen .form-box .form-group .control-label {
+          margin: 2%; }
+        .email-form-screen .form-box .form-group .btn {
+          margin: 2%; } }

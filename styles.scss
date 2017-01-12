@@ -9,8 +9,11 @@ body {
 a {
     text-decoration: none;
 }
+.hidden {
+    display: none;
+}
 /////////////// desktop sizing///////////////
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
     .down-arrow {
         display: none;
     }
@@ -27,7 +30,7 @@ a {
         width: 50vw;
         height: 50vh;
         text-align: center;
-        img {
+        #logo {
             align-self: center;
             max-width: 40%;
             max-height: 90%;
@@ -35,12 +38,18 @@ a {
         .contact-container {
             align-self: center;
             width: 100%;
+            // height: 100%;
             flex-grow: 1;
             // background-color: lightblue;
-            .contact-button {
-                width: 25%;
-                // background-color: lightgreen;
-                margin: 5%auto;
+            .title-button {
+                width: 75%;
+                transition: ease 0.7s;
+                &:hover {
+                    transform: scale(1.25);
+                }
+            }
+            .etsy-two {
+                display: none;
             }
         }
     }
@@ -239,44 +248,63 @@ a {
             }
         }
     }
-
-// .email-form-screen {
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//     background-color: rgba(51, 51, 51, .7);
-//     z-index: 500;
-//     .form-box {
-//         margin: auto;
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         bottom: 0;
-//         right: 0;
-//         width: 35%;
-//         height: 70%;
-//         border-radius: 5px;
-//         background-color: lightgreen;
-//         -webkit-box-shadow: 10px 10px 70px 5px rgba(0,0,0,0.75);
-//         -moz-box-shadow: 10px 10px 70px 5px rgba(0,0,0,0.75);
-//         box-shadow: 10px 10px 70px 5px rgba(0,0,0,0.75);
-//     }
-// }
+    .email-form-screen {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(51, 51, 51, .7);
+        z-index: 500;
+        .close-email {
+            width: 5%;
+            margin: 2%;
+            float: right;
+        }
+        .form-box {
+            align-self: center;
+            color: white;
+            margin: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            border-radius: 5px;
+            background: linear-gradient(rgba(51, 51, 51, .5), rgba(255, 255, 255, 0.2)),url("../assets/construction-work-carpenter-tools_thumb.jpg");
+            background-position: center;
+            background-size: cover;
+            -webkit-box-shadow: 10px 10px 70px 5px rgba(0,0,0,0.5);
+            -moz-box-shadow: 10px 10px 70px 5px rgba(0,0,0,0.5);
+            box-shadow: 10px 10px 70px 5px rgba(0,0,0,0.5);
+            .form-group {
+                margin-bottom: 2%;
+                .control-label {
+                    margin: 2%;
+                }
+                .btn {
+                    margin: 2%;
+                }
+            }
+        }
+    }
 }
 /////////////////landscape sizing/////////////////////
-@media only screen and (max-width: 999px) and (orientation: landscape) {
+@media only screen and (max-width: 1199px) and (orientation: landscape) {
     /*---------------------------*/
     .spacer {
         width: 100%;
         flex-grow: 1;
-        background-color: lightblue;
+        // background-color: lightblue;
     }
     .up-arrow {
+        // display: none;
         margin-top: 8%;
         margin-bottom: 2%;
         margin-left: 85%;
     }
     .down-arrow {
+        // display: none;
         margin-top: 2%;
         margin-bottom: 8%;
         margin-left: 85%;
@@ -289,7 +317,7 @@ a {
         float: left;
         display: flex;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: row;
         width: 100vw;
         height: 100vh;
         text-align: center;
@@ -298,17 +326,21 @@ a {
             max-width: 40%;
             max-height: 90%;
         }
-
         .contact-container {
             align-self: center;
             width: 100%;
+            // height: 100%;
             flex-grow: 1;
             // background-color: lightblue;
-            .contact-button {
-                width: 25%;
-                // background-color: lightgreen;
-                margin: 5%auto;
+            .title-button {
+                width: 75%;
             }
+            .etsy-two {
+                display: none;
+            }
+        }
+        .down-arrow {
+            display: none;
         }
     }
     .mission {
@@ -334,7 +366,7 @@ a {
             background-color: rgba(51, 51, 51, .5);
             margin: 0;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             padding: 2%;
             font-family: $desc-font;
         }
@@ -371,7 +403,7 @@ a {
             display: inline-block;
             margin: 0;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             padding: 2%;
             font-family: $desc-font;
         }
@@ -471,36 +503,54 @@ a {
             }
         }
     }
-    // .email-form-screen {
-    //     position: absolute;
-    //     width: 100%;
-    //     height: 100%;
-    //     background-color: rgba(51, 51, 51, .7);
-    //     z-index: 500;
-    //     .form-box {
-    //         margin: auto;
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         bottom: 0;
-    //         right: 0;
-    //         width: 35%;
-    //         height: 70%;
-    //         border-radius: 5px;
-    //         background-color: lightgreen;
-    //         -webkit-box-shadow: 10px 10px 70px 5px rgba(0,0,0,0.75);
-    //         -moz-box-shadow: 10px 10px 70px 5px rgba(0,0,0,0.75);
-    //         box-shadow: 10px 10px 70px 5px rgba(0,0,0,0.75);
-    //     }
-    // }
+    .email-form-screen {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(51, 51, 51, .7);
+        z-index: 500;
+        .close-email {
+            width: 8%;
+            margin: 2%;
+            float: right;
+        }
+        .form-box {
+            align-self: center;
+            color: white;
+            margin: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 75%;
+            border-radius: 5px;
+            background: linear-gradient(rgba(51, 51, 51, .5), rgba(255, 255, 255, 0.2)),url("../assets/construction-work-carpenter-tools_thumb.jpg");
+            background-position: center;
+            background-size: cover;
+            -webkit-box-shadow: 10px 10px 70px 5px rgba(0,0,0,0.5);
+            -moz-box-shadow: 10px 10px 70px 5px rgba(0,0,0,0.5);
+            box-shadow: 10px 10px 70px 5px rgba(0,0,0,0.5);
+            .form-group {
+                margin-bottom: 2%;
+                .control-label {
+                    margin: 2%;
+                }
+                .btn {
+                    margin: 2%;
+                }
+            }
+        }
+    }
 }
 //////////////////////phone sizing//////////////////
-@media only screen and (max-width: 999px) and (orientation: portrait) {
+@media only screen and (max-width: 1199px) and (orientation: portrait) {
     /*---------------------------*/
     .spacer {
         width: 100%;
         flex-grow: 1;
-        background-color: lightblue;
+        // background-color: lightblue;
     }
     .up-arrow {
         margin-top: 10%;
@@ -524,14 +574,22 @@ a {
         width: 100vw;
         height: 100vh;
         text-align: center;
-        img {
+        #logo {
             max-width: 80%;
             align-self: center;
         }
         .contact-container {
+            align-self: center;
             width: 100%;
             flex-grow: 1;
             // background-color: lightblue;
+            .title-button {
+                width: 40%;
+                transition: ease 0.7s;
+            }
+            .etsy-one {
+                display: none;
+            }
         }
     }
     .mission {
@@ -621,7 +679,7 @@ a {
             flex-direction: column;
             width: 100%;
             height: 80%;
-            background-color: lightblue;
+            // background-color: lightblue;
             align-self: center;
             .furniture-group {
                 width: 90%;
@@ -663,26 +721,44 @@ a {
             }
         }
     }
-    // .email-form-screen {
-    //     position: absolute;
-    //     width: 100%;
-    //     height: 100%;
-    //     background-color: rgba(51, 51, 51, .7);
-    //     z-index: 500;
-    //     .form-box {
-    //         margin: auto;
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         bottom: 0;
-    //         right: 0;
-    //         width: 35%;
-    //         height: 70%;
-    //         border-radius: 5px;
-    //         background-color: lightgreen;
-    //         -webkit-box-shadow: 10px 10px 70px 5px rgba(0,0,0,0.75);
-    //         -moz-box-shadow: 10px 10px 70px 5px rgba(0,0,0,0.75);
-    //         box-shadow: 10px 10px 70px 5px rgba(0,0,0,0.75);
-    //     }
-    // }
+    .email-form-screen {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(51, 51, 51, .7);
+        z-index: 500;
+        .close-email {
+            width: 10%;
+            margin: 2%;
+            float: right;
+        }
+        .form-box {
+            align-self: center;
+            color: white;
+            margin: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 90%;
+            border-radius: 5px;
+            background: linear-gradient(rgba(51, 51, 51, .5), rgba(255, 255, 255, 0.2)),url("../assets/construction-work-carpenter-tools_thumb.jpg");
+            background-position: center;
+            background-size: cover;
+            -webkit-box-shadow: 10px 10px 70px 5px rgba(0,0,0,0.5);
+            -moz-box-shadow: 10px 10px 70px 5px rgba(0,0,0,0.5);
+            box-shadow: 10px 10px 70px 5px rgba(0,0,0,0.5);
+            .form-group {
+                margin-bottom: 2%;
+                .control-label {
+                    margin: 2%;
+                }
+                .btn {
+                    margin: 2%;
+                }
+            }
+        }
+    }
 }
