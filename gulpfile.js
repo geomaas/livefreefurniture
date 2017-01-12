@@ -3,7 +3,7 @@
 let gulp = require('gulp');
 let sass = require('gulp-sass');
 // let browserify = require('gulp-browserify');
-// var surge = require('gulp-surge');
+var surge = require('gulp-surge');
 
 
 gulp.task('default', ['html', 'css', 'js']);
@@ -30,12 +30,12 @@ gulp.task('js', function () {
         .pipe(gulp.dest('./public/js'))
 });
 
-// gulp.task('deploy', [], function() {
-//     return surge({
-//         project: './public', // Path to your static build directory
-//         domain: 'sable-front.surge.sh',
-//     })
-// });
+gulp.task('deploy', [], function() {
+    return surge({
+        project: './public', // Path to your static build directory
+        domain: 'obtainable-suit.surge.sh',
+    })
+});
 
 gulp.task('watch', function () {
     gulp.watch('./js/*.js', ['js']);
