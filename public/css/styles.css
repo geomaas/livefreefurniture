@@ -235,7 +235,12 @@ a {
         .email-form-screen .form-box .form-group .control-label {
           margin: 2%; }
         .email-form-screen .form-box .form-group .btn {
-          margin: 2%; } }
+          margin: 2%; }
+  .footer {
+    background-color: #333333;
+    margin: 0;
+    width: 100%;
+    height: 10vh; } }
 
 @media only screen and (max-width: 1199px) and (orientation: landscape) {
   /*---------------------------*/
